@@ -3,11 +3,12 @@ var message_parts = {
     second : ['have a great day!', 'shine like a dimond', 'have a new start']
 }
 
-function playgame () {
-    let ranFirst = Math.floor(Math.random() * message_parts.first.length);
-    let ranSecond = Math.floor(Math.random() * message_parts.second.length);
+function getRand (arg) {
+    return Math.floor(Math.random() * arg.length);
+}
 
-    console.log(message_parts.first[ranFirst] + message_parts.second[ranSecond]);
+function playgame () {
+    console.log(message_parts.first[getRand(message_parts.first)] + message_parts.second[getRand(message_parts.second)]);
 }
 
 playgame();
